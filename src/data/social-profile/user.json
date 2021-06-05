@@ -1,0 +1,38 @@
+[
+  {
+  "name": "Jacques Gluke",
+  "id": 1,
+  "tag": "jgluke",
+  "location": "Ocho Rios, Jamaica",
+  "avatar": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  "stats": {
+    "followers": 5603,
+    "views": 4827,
+    "likes": 1308
+  }
+},
+{
+  "name": "John Doe",
+  "id": 2,
+  "tag": "JDoe",
+  "location": "Netherlands, Amsterdam",
+  "avatar": "https://images.pexels.com/photos/6774532/pexels-photo-6774532.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+  "stats": {
+    "followers": 304,
+    "views": 15000,
+    "likes": 9
+  }
+},
+{
+  "name": "Sebastian Navicki",
+  "id": 3,
+  "tag": "sebastian",
+  "location": "Panama",
+  "avatar": "https://images.pexels.com/photos/6096399/pexels-photo-6096399.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+  "stats": {
+    "followers": 15603,
+    "views": 73487,
+    "likes": 345
+  }
+}
+]
