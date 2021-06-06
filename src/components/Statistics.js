@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import propTypes from 'prop-types'
 
 const Wrapper = styled.div`
   height: 50vh;
@@ -10,6 +9,7 @@ const Wrapper = styled.div`
   align-items: center;
   margin: 0px;
   padding: 0px;
+  background-color: ${(props) => props.color};
 `
 
 const Section = styled.section`
@@ -43,7 +43,7 @@ const ListRow = styled.ul`
   width: 100%;
   list-style: none;
 `
-const List_Item = styled.li`
+const ListItem = styled.li`
   text-align: center;
   height: 100%;
   width: 125px;
@@ -54,23 +54,30 @@ const List_Item = styled.li`
   align-items: center;
 
   &:nth-child(1) {
-    background-color: #3498db;
+    background-color: ${(props) => props.color1};
     border-bottom-left-radius: 9px;
   }
   &:nth-child(2) {
-    background-color: #27ae60;
+    background-color: ${(props) => props.color2};
   }
   &:nth-child(3) {
-    background-color: #9b59b6;
+    background-color: ${(props) => props.color3};
   }
   &:nth-child(4) {
-    background-color: #f1c40f;
+    background-color: ${(props) => props.color4};
     border-bottom-right-radius: 9px;
   }
 `
 const Percentage = styled.span`
   font-size: 40px;
 `
+const color1 = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
+const color2 = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
+const color3 = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
+const color4 = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
+
+console.log(color2)
+
 function Statistics({ stats }) {
   return (
     <Wrapper>
@@ -78,22 +85,22 @@ function Statistics({ stats }) {
         <HeaderText>Upload stats</HeaderText>
 
         <ListRow>
-          <List_Item>
+          <ListItem color1={color1}>
             <span className='label'>{stats[0].label}</span>
             <Percentage>{stats[0].percentage}%</Percentage>
-          </List_Item>
-          <List_Item>
+          </ListItem>
+          <ListItem color2={color2}>
             <span className='label'>{stats[2].label}</span>
             <Percentage>{stats[2].percentage}%</Percentage>
-          </List_Item>
-          <List_Item>
+          </ListItem>
+          <ListItem color3={color3}>
             <span className='label'>{stats[1].label}</span>
             <Percentage>{stats[1].percentage}%</Percentage>
-          </List_Item>
-          <List_Item>
+          </ListItem>
+          <ListItem color4={color4}>
             <span className='label'>{stats[3].label}</span>
             <Percentage>{stats[3].percentage}%</Percentage>
-          </List_Item>
+          </ListItem>
         </ListRow>
       </Section>
     </Wrapper>
