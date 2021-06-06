@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import propTypes from 'prop-types'
 
 const Image = styled.img`
   border-radius: 50%;
@@ -56,36 +57,56 @@ const TagLoc = styled.p`
   margin-bottom: 10px;
 `
 
-function Profile(props) {
+function Profile({ name, avatar, tag, location, stats }) {
   return (
     <OneProfile>
       <Description>
-        <Image
-          src={props.avatar}
-          alt='Аватар пользователя'
-          className='avatar'
-        />
-        <Name>{props.name}</Name>
-        <TagLoc>@{props.tag}</TagLoc>
-        <TagLoc>{props.location}</TagLoc>
+        <Image src={avatar} alt='Аватар пользователя' className='avatar' />
+        <Name>{name}</Name>
+        <TagLoc>@{tag}</TagLoc>
+        <TagLoc>{location}</TagLoc>
       </Description>
 
       <Stats>
         <List>
           <Labels className='label'>Followers</Labels>
-          <Values className='quantity'>{props.stats.followers}</Values>
+          <Values className='quantity'>{stats.followers}</Values>
         </List>
         <List>
           <Labels className='label'>Views</Labels>
-          <Values className='quantity'>{props.stats.views}</Values>
+          <Values className='quantity'>{stats.views}</Values>
         </List>
         <List>
           <Labels className='label'>Likes</Labels>
-          <Values className='quantity'>{props.stats.likes}</Values>
+          <Values className='quantity'>{stats.likes}</Values>
         </List>
       </Stats>
     </OneProfile>
   )
+}
+
+Profile.defaultProps = {
+  name: 'unknown.not loaded yet',
+  avatar: 'https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg',
+  tag: 'unknown tag',
+  location: 'not known',
+  stats: {
+    followers: 0,
+    views: 0,
+    likes: 0,
+  },
+}
+
+Profile.propTypes = {
+  name: propTypes.string,
+  avatar: propTypes.string.isRequired,
+  tag: propTypes.string,
+  location: propTypes.string,
+  stats: {
+    followers: propTypes.number,
+    views: propTypes.number,
+    likes: propTypes.number,
+  },
 }
 
 export default Profile
