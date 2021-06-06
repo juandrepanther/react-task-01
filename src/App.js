@@ -4,6 +4,8 @@ import data from '../src/data/social-profile/user.json'
 import styled from 'styled-components'
 import stats from '../src/data/statistics/statistical-data.json'
 import Statistics from './components/Statistics'
+import friends from '../src/data/friend-list/friends.json'
+import FriendList from '../src/components/FriendList/FriendList'
 
 const Container = styled.div`
   height: 100vh;
@@ -34,6 +36,7 @@ function App() {
         })}
       </Container>
       <Statistics stats={stats} />
+      <FriendList friends={friends} />
     </>
   )
 }

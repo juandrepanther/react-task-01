@@ -88,19 +88,19 @@ function Statistics({ stats }) {
         <HeaderText>Upload stats</HeaderText>
 
         <ListRow>
-          <ListItem color={color}>
+          <ListItem color={color()}>
             <span className='label'>{stats[0].label}</span>
             <Percentage>{stats[0].percentage}%</Percentage>
           </ListItem>
-          <ListItem color={color}>
+          <ListItem color={color()}>
             <span className='label'>{stats[2].label}</span>
             <Percentage>{stats[2].percentage}%</Percentage>
           </ListItem>
-          <ListItem color={color}>
+          <ListItem color={color()}>
             <span className='label'>{stats[1].label}</span>
             <Percentage>{stats[1].percentage}%</Percentage>
           </ListItem>
-          <ListItem color={color}>
+          <ListItem color={color()}>
             <span className='label'>{stats[3].label}</span>
             <Percentage>{stats[3].percentage}%</Percentage>
           </ListItem>

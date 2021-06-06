@@ -1,31 +1,31 @@
 [
   {
-    "avatar": "https://www.flaticon.com/svg/static/icons/svg/763/763704.svg",
-    "name": "Mango",
+    "avatar": "https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+    "name": "Jeremy",
     "isOnline": true,
     "id": 1812
   },
   {
-    "avatar": "https://www.flaticon.com/svg/static/icons/svg/1998/1998671.svg",
-    "name": "Kiwi",
+    "avatar": "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80",
+    "name": "Sabina",
     "isOnline": false,
     "id": 1137
   },
   {
-    "avatar": "https://www.flaticon.com/svg/static/icons/svg/1623/1623681.svg",
-    "name": "Ajax",
+    "avatar": "https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=394&q=80",
+    "name": "Alex",
     "isOnline": true,
     "id": 1213
   },
   {
-    "avatar": "https://www.flaticon.com/svg/static/icons/svg/2977/2977285.svg",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
     "name": "Jay",
     "isOnline": true,
     "id": 1714
   },
   {
-    "avatar": "https://www.flaticon.com/svg/static/icons/svg/1998/1998749.svg",
-    "name": "Poly",
+    "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+    "name": "Tedy",
     "isOnline": false,
     "id": 1284
   }
