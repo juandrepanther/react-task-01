@@ -2,6 +2,8 @@ import './App.css'
 import Profile from '../src/components/Profile'
 import data from '../src/data/social-profile/user.json'
 import styled from 'styled-components'
+import stats from '../src/data/statistics/statistical-data.json'
+import Statistics from './components/Statistics'
 
 const Container = styled.div`
   height: 100vh;
@@ -16,20 +18,23 @@ const Container = styled.div`
 
 function App() {
   return (
-    <Container>
-      {data.map((data) => {
-        return (
-          <Profile
-            key={data.id}
-            name={data.name}
-            tag={data.tag}
-            location={data.location}
-            avatar={data.avatar}
-            stats={data.stats}
-          />
-        )
-      })}
-    </Container>
+    <>
+      <Container>
+        {data.map((data) => {
+          return (
+            <Profile
+              key={data.id}
+              name={data.name}
+              tag={data.tag}
+              location={data.location}
+              avatar={data.avatar}
+              stats={data.stats}
+            />
+          )
+        })}
+      </Container>
+      <Statistics stats={stats} />
+    </>
   )
 }
 
