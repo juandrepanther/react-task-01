@@ -23,6 +23,7 @@ const Description = styled.div`
 `
 const Stats = styled.ul`
   height: 5rem;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +37,10 @@ const List = styled.li`
   justify-content: center;
   align-items: center;
   list-style: none;
-  margin: 0px 15px;
+  border-top: 1px rgba(208, 208, 208, 0.5) solid;
+  &:not(:last-child) {
+    border-right: 1px rgba(208, 208, 208, 0.5) solid;
+  }
 `
 
 const Labels = styled.span`
