@@ -54,29 +54,32 @@ const ListItem = styled.li`
   align-items: center;
 
   &:nth-child(1) {
-    background-color: ${(props) => props.color1};
+    background-color: ${(props) => props.color};
     border-bottom-left-radius: 9px;
   }
   &:nth-child(2) {
-    background-color: ${(props) => props.color2};
+    background-color: ${(props) => props.color};
   }
   &:nth-child(3) {
-    background-color: ${(props) => props.color3};
+    background-color: ${(props) => props.color};
   }
   &:nth-child(4) {
-    background-color: ${(props) => props.color4};
+    background-color: ${(props) => props.color};
     border-bottom-right-radius: 9px;
   }
 `
 const Percentage = styled.span`
   font-size: 40px;
 `
-const color1 = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
-const color2 = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
-const color3 = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
-const color4 = '#' + Math.floor(Math.random() * 0xffffff).toString(16)
 
-console.log(color2)
+function color() {
+  let letters = '0123456789ABCDEF'
+  let color = '#'
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)]
+  }
+  return color
+}
 
 function Statistics({ stats }) {
   return (
@@ -85,19 +88,19 @@ function Statistics({ stats }) {
         <HeaderText>Upload stats</HeaderText>
 
         <ListRow>
-          <ListItem color1={color1}>
+          <ListItem color={color}>
             <span className='label'>{stats[0].label}</span>
             <Percentage>{stats[0].percentage}%</Percentage>
           </ListItem>
-          <ListItem color2={color2}>
+          <ListItem color={color}>
             <span className='label'>{stats[2].label}</span>
             <Percentage>{stats[2].percentage}%</Percentage>
           </ListItem>
-          <ListItem color3={color3}>
+          <ListItem color={color}>
             <span className='label'>{stats[1].label}</span>
             <Percentage>{stats[1].percentage}%</Percentage>
           </ListItem>
-          <ListItem color4={color4}>
+          <ListItem color={color}>
             <span className='label'>{stats[3].label}</span>
             <Percentage>{stats[3].percentage}%</Percentage>
           </ListItem>
