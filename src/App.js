@@ -6,6 +6,8 @@ import stats from '../src/data/statistics/statistical-data.json'
 import Statistics from './components/Statistics'
 import friends from '../src/data/friend-list/friends.json'
 import FriendList from '../src/components/FriendList/FriendList'
+import TransactionsHistory from '../src/components/TransactionHistory'
+import transactions from '../src/data/transaction-history/transactions.json'
 
 const Container = styled.div`
   height: 100vh;
@@ -37,6 +39,7 @@ function App() {
       </Container>
       <Statistics stats={stats} />
       <FriendList friends={friends} />
+      <TransactionsHistory transactions={transactions}/>
     </>
   )
 }
