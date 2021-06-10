@@ -4,3 +4,35 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 }
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+th, td {
+    
+    text-align: left;
+    padding: 10px;
+}
+
+thead {
+    background-color: #c7ecee;
+    
+}
+th:nth-child(1) {
+    border-right: 1px rgb(255, 255, 255) solid;
+}
+th:nth-child(3) {
+    border-left: 1px rgb(255, 255, 255) solid;
+}
+tbody:nth-child(odd) {
+    background-color: #e0e0e0;
+}
+td:nth-child(1) {
+    border-right: 1px rgb(216, 216, 216) solid;
+}
+td:nth-child(3) {
+    border-left: 1px rgb(216, 216, 216) solid;
+}
